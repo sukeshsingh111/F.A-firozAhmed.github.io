@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    <!-- <title>Responsive Navigation Bar</title> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Jquery slideshow" />
+  
+  <!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+  <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+  <script type="text/javascript" src="engine1/jquery.js"></script>
+
+  <!-- SERVICES all next -->
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+ -->
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+	</title>
+	<style type="text/css">
+		    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+		*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif; 
+
+
+}
+
+
+
+
+
+nav{
+
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 300% 300%;
+  background-repeat: no-repeat;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+nav ul{
+   
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0px;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  margin-left: 100px;
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 400;
+  cursor: default;
+  user-select: none;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: cyan;
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
+  display: none;
+}
+nav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+
+#container{
+  top: -20px;
+  position: relative;
+    background-color:#d7d7d7;margin:auto;
+    height: 650px;
+
+}
+.profile{
+  margin-left: 100px;
+  margin-top:70px;   
+
+  max-width: 300px;
+
+}
+
+
+.logo1{
+  background-image: url("img/2.png");
+  width: 200px;
+}
+/*profile*/
+#tsparticles {
+  position: absolute;
+  max-width: 100%;
+  height: 900px; 
+  padding: 0;
+  margin: 0;
+}
+.img-responsive{
+  max-width: 200px;
+  border: 1px solid red;
+
+}
+.pad{
+  padding-left: 90px;
+}
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
+@media all and (max-width: 900px){
+  #tsparticles {
+  position: absolute;
+  max-width: 100%;
+  height: 900px; 
+}
+
+#container{
+  
+    height: 150%;
+
+}
+
+}
+
+}
+@media all and (max-width: 1326px){
+#container{
+  
+    height: 110%;
+
+}
+
+
+}
+@media all and (max-width: 888px){
+
+  #tsparticles {
+  position: absolute;
+  max-width: 100%;
+  height: 1100px; 
+}
+
+}
+
+@media all and (max-width: 768px){
+  #tsparticles {
+  position: absolute;
+  max-width: 100%;
+  height: 1500px; 
+}
+
+}
+@media all and (max-width: 388px){
+ #tsparticles {
+  
+  height: 2200%; 
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+}
+
+}
+@media all and (max-width: 530px){
+ #tsparticles {
+  
+  height: 2200%; 
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+}
+
+
+}
+@media all and (max-width: 329px){
+#tsparticles {
+  
+  height: 2800px; 
+  padding: 0;
+  margin: 0;
+}
+
+.profile{
+  position: relative;
+  right: 20px;
+
+}
+
+}
+@media all and (max-width: 360px){
+
+
+
+.profile{
+top: 30px;
+  position: relative;
+  right: 70px;
+
+}
+
+}
+
+	</style>
+</head>
+<body>
+ <nav>
+      <ul>
+<li class="logo"><img src="img/Capture8-removebg-preview (1).png" width="300"></li>
+<li class="items"><a href="#Home">Home</a></li>
+<li class="items"><a href="#services"> Services</a></li>
+<li class="items"><a href="#portfolio">Portfolio</a></li>
+<li class="items"><a href="#team">Team</a></li>
+
+<li class="items"><a href="#contact">Contact</a></li>
+<li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+</ul>
+</nav>
+     <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script>
+<div id="container">
+  <div id="body1">
+    <div id="wowslider-container1">
+  <div class="ws_images"><ul>
+    <li><img src="data1/images/bigstockkitcheninluxuryhomewithre16568345580x527.jpg" alt="bigstock-Kitchen-in-luxury-home-with-re-16568345-580x527" title="bigstock-Kitchen-in-luxury-home-with-re-16568345-580x527" id="wows1_0"/></li>
+    <li><img src="data1/images/di_an_hg_8mrezavyeunsplash.jpg" alt="di_an_h-g_8MrEZAvyE-unsplash" title="di_an_h-g_8MrEZAvyE-unsplash" id="wows1_1"/></li>
+    <li><a href="http://wowslider.net"><img src="data1/images/francescatosolinihd7qbx2yfa4unsplash.jpg" alt="html slideshow" title="francesca-tosolini-HD7QBx2Yfa4-unsplash" id="wows1_2"/></a></li>
+    <li><img src="data1/images/tiagorosadocnn7eqvmfrkunsplash.jpg" alt="tiago-rosado-cnN7eqvmFRk-unsplash" title="tiago-rosado-cnN7eqvmFRk-unsplash" id="wows1_3"/></li>
+  </ul></div>
+  <div class="ws_bullets"><div>
+    <a href="#" title="bigstock-Kitchen-in-luxury-home-with-re-16568345-580x527"><span><img src="data1/tooltips/bigstockkitcheninluxuryhomewithre16568345580x527.jpg" alt="bigstock-Kitchen-in-luxury-home-with-re-16568345-580x527"/>1</span></a>
+    <a href="#" title="di_an_h-g_8MrEZAvyE-unsplash"><span><img src="data1/tooltips/di_an_hg_8mrezavyeunsplash.jpg" alt="di_an_h-g_8MrEZAvyE-unsplash"/>2</span></a>
+    <a href="#" title="francesca-tosolini-HD7QBx2Yfa4-unsplash"><span><img src="data1/tooltips/francescatosolinihd7qbx2yfa4unsplash.jpg" alt="francesca-tosolini-HD7QBx2Yfa4-unsplash"/>3</span></a>
+    <a href="#" title="tiago-rosado-cnN7eqvmFRk-unsplash"><span><img src="data1/tooltips/tiagorosadocnn7eqvmfrkunsplash.jpg" alt="tiago-rosado-cnN7eqvmFRk-unsplash"/>4</span></a>
+  </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery slideshow</a> by WOWSlider.com v9.0</div>
+  <div class="ws_shadow"></div>
+</div>
+</div></div>
+  </div>  
+  <script type="text/javascript" src="engine1/wowslider.js"></script>
+  <script type="text/javascript" src="engine1/script.js"></script>
+  <!-- End WOWSlider.com BODY section -->
+
+
+<!-- profile info -->
+
+<div id="tsparticles" class="col-xl-12 col-md-12 col-sm-12 col-12"></div>
+<!-- https://github.com/matteobruni/tsparticles -->
+<div style="position: relative; color: white; font-weight: bold;">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-12">
+      <img class="profile" src="img/3.png" class="img-responsive">
+      
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+     <h1 class="font-effect-fire">10 years experience of plywood carpenter</h1>
+      <p>Craftsmanship, Carpenters Wood works is capable of building anything thats wood, from kitchen cabinets and dining room sets to office furniture and complex hand carved doors.
+</p>
+&nbsp&nbsp
+
+<h2 class="font-effect-emboss" style="color: green;" class="col-sm-12"><img src="img/2.png" width="70">LIVING ROOM</h2>
+  <p style="margin-left: 60px;">Have you ever seen anything more beautiful than a space with all-wood furniture? It is no wonder that a lot of interior designers are adopting furniture made of wood.
+  </p>
+&nbsp&nbsp
+
+<h2 class="font-effect-emboss" style="color: green;" class="col-sm-12"><img src="img/2.png" width="70">BEDROOM</h2>
+  <p style="margin-left: 60px;">After making the key decisions regarding the size, thickness and type of plywood.
+</p>
+
+&nbsp&nbsp
+
+<h2 class="font-effect-emboss" style="color: green; font-size: 22PX;" class="col-sm-12"><img src="img/2.png" width="70">KITCHEN AND ALL TYPE OF FURNITURE WORKS</h2>
+  <p style="margin-left: 60px;">There are over 18 types of plywood distinguished based on the type of wood used, application and process. However, let us concentrate on the three basic types — MR ply, BWR/BWP ply and Marine ply
+</p>
+
+
+</div>
+    </div>
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js'></script><script  src="./script.js"></script>
+
+</div>
+
+
+
+<!-- serivce all -->
+
+
+
+<section id="services" class="services section-bg" style="background-color: red;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 class="font-effect-fire">Best Service Provider</h2>
+          <p><span style="color: lightblue; font-size: 21px;"> Convenience:</span> Plywood can be used easily without worrying about damage to the plank while using nails and screws. It is also available in various sizes favourable in making furniture.</p>
+          <P><span style="color: lightblue; font-size: 21px;">Durability: </span>Homeowners prefer this material for its sturdy nature, second only to wood. Also, it doesn’t warp or shrink in varying temperatures making it ideal for households.</P>
+          <P><span style="color: lightblue; font-size: 21px;">Flexible:</span> The material is available in varied sizes, densities and quality for varying applications. Thus, whether cabinets and furniture or thin wall panels, this is your best bet.</P>
+          <p><span style="color: lightblue; font-size: 21px;">Eco-friendly:</span> Plywood ensures there is minimal wastage and can also be recycled. Thus, it is eco-friendly as well.
+        </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6" >
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i>
+
+
+              <div><img alt="homify HouseholdPet accessories" src="https://images.homify.com/image/upload/a_0,c_fill,f_auto,h_632,q_auto,w_632/v1438184869/p/photo/image/161234/_BFL0773.jpg"/ width="150"></a></div>
+            </i>
+              <h4 class="pad" class="pad font-effect-emboss" style="color: red;"><a href="#" style="color: green;">The bathroom cabinet</a></h4>
+              <p class="pad">The washbasin cabinet in your bathroom will look more beautiful than ever with a design like this one. The wall is cladded in wood that matches the lower part of the furniture, which is decorated with more wood and wicker. It looks striking with the marble counter.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i>
+                <div><img alt="Down Barton, Devon Trewin Design Architects Modern kitchen" src="https://images.homify.com/images/a_0,c_fill,f_auto,h_632,q_auto,w_632/v1450273149/p/photo/image/1199384/10/modern-kitchen-photos-by-trewin-design-architects.jpg"/ width="150"></div>
+              </i>
+              <h4 class="pad"><a href="#" style="color: green;">Kitchen furniture in wood to increase</a></h4>
+              <p class="pad">A kitchen in wood is always charming. Depending on the tones you use and the combination of the remaining finishes, you can create a style that matches the décor theme in the rest of the house.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i>
+                <div><img alt="homify HouseholdPet accessories" src="https://images.homify.com/image/upload/a_0,c_fill,f_auto,h_632,q_auto,w_632/v1438184869/p/photo/image/161234/_BFL0773.jpg"/ width="150"></a></div>
+              </i>
+              <h4 class="pad"><a href="#" style="color: green;">A very original shelf design</a></h4>
+              <p class="pad">Carpenters can work magic with wood, turning a block of timber into a true work of art and crafting perfect pieces in varied styles and sizes. </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i>
+                <img src="img/7.jpg" width="120">
+              </i>
+              <h4 class="pad"><a href="#" style="color: green;">kitchen plywood door</a></h4>
+              <p class="pad">The kitchen area is a space that is exposed to a lot of water and moisture on a daily basis. Hence, simply using solid wood for cabinets and other kitchen spaces would not do any good. </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+              <i>
+                     <img src="img/8.jpg" width="120">
+
+              </i>
+              <h4 class="pad"><a href="#" style="color: green;">Plywood Bed</a></h4>
+              <p class="pad">The average person spends one third of their life sleeping. That’s 33% of your life in blissful slumber. This essentially means you’re spending a significant portion of your life in bed, which means having the right bed isn’t something that should be ignored or downplayed.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+              <i>
+                                     <img src="img/9.jpg" width="120">
+
+              </i>
+              <h4 class="pad"><a href="#" style="color: green;">Plywood furniture</a></h4>
+              <p class="pad">A similar, but slightly different option is to use a product from our Strataply range. These products have been specifically tailored to meet the needs of furniture making, giving it the physical and visual qualities designers and builders desire giving it the physical.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 style="color: black;" class="font-effect-fire">Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/IMG_20210406_172450.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/IMG-20191116-WA0007.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/IMG-20191109-WA0012.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/IMG-20191109-WA0012.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/IMG_20210406_215515.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/IMG_20210406_215515.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/IMG_20210406_172450.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/IMG_20210406_172450.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/IMG-20170503-WA0001.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/IMG-20170503-WA0001.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/919967972370_status_580789db622d481d9e4e87daa7aa4da0.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/919967972370_status_580789db622d481d9e4e87daa7aa4da0.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/IMG_20181030_142335.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/IMG_20181030_142335.jpg.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/IMG_20200905_153011.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/IMG_20200905_153011.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/IMG-20191116-WA0007.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/IMG-20191116-WA0007.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2 style="color: black;" class="font-effect-fire">Testimonials</h2>
+          <p style="color: gray; font-size: 20px;">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="owl-carousel testimonials-carousel">
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/1.jpg" class="testimonial-img" alt="">
+                  <h3>sukesh</h3>
+                  <h4>desginer</h4>
+                  <p style="color: gray; font-size: 15px;">
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/2.jpg" class="testimonial-img" alt="">
+                  <h3>Ahmed</h3>
+                  <h4>Owners</h4>
+                  <p style="color: gray; font-size: 15px;">
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/1.jpg" class="testimonial-img" alt="">
+                  <h3>Sukesh</h3>
+                  <h4>desginer</h4>
+                  <p style="color: gray; font-size: 15px;">
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/2.jpg" class="testimonial-img" alt="">
+                  <h3>Ahmed</h3>
+                  <h4>Owners</h4>
+                  <p style="color: gray; font-size: 15px;">
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+   
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 class="font-effect-fire">Team</h2>
+          <p>The Company is a pioneer in the Indian plywood industry and one of the first few manufacturers to venture into producing a wide range of high quality plywood and related products.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="assets/img/team/3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Firoz Ahmed</h4>
+                <span>Owners of F.A Furniture</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="assets/img/team/4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sukesh Singh</h4>
+                <span>designer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="assets/img/team/3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Firoz Ahmed</h4>
+                <span>Owners of F.A Furniture</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/team/4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sukesh Singh</h4>
+                <span>designer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 style="color: black;" class="font-effect-fire">Contact</h2>
+         
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>koperkhairane sec17 navi mumbai maharashtra</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>firoz1991ahmed@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 97680 18312</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <p>koperkhairane <br>
+              sec17 navi mumbai<br>
+              maharashtra <br><br>
+              <strong>Phone:</strong> +91 97680 18312<br>
+              <strong>Email:</strong> firoz1991ahmed@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful</h4>
+            <ul>
+               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Portfolio
+</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <ul>
+            
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>f.a. furniture</h4>
+            <p>If you are staring your own furniture business, you will really love this page. Because we are sharing with more a lot of furniture store names. These catchy furniture business names ideas will help you easily come up with a name for your furniture business.
+
+</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        
+        
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
